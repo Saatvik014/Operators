@@ -1,0 +1,18 @@
+Question)
+In the following program, explain why the value "6" is printed twice in a row:
+class PrePostDemo {
+    public static void main(String[] args){
+        int i = 3;
+        i++;
+        System.out.println(i);    // "4"
+        ++i;                     
+        System.out.println(i);    // "5"
+        System.out.println(++i);  // "6"
+        System.out.println(i++);  // "6"
+        System.out.println(i);    // "7"
+    }
+}
+
+Answer)"6" is printed twice because after the 7th line value of i becomes 5 and then ++i is used and we know by using prefix
+value of i will now become "6" and after that in the 9th line i++ is used, so i was "6" and by using postfix i will remain 6
+only, but 7 will be stored in memory and after that in the 10th line increemented value is printed.
